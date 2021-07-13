@@ -20,7 +20,13 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18;
 
+if(votingAge >= 18){
+  console.log('task 1 a:',true);
+}else{
+console.log('task 1 a:', false);
+}
 
 /*
 Task 1b - Values
@@ -33,7 +39,13 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18;
 
+if(votingAge >= 18){
+  console.log('task 1 a:',true);
+}else{
+console.log('task 1 a:', false);
+}
 
 
 
@@ -48,7 +60,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+const party = '1999';
+console.log('task 1 c:', Number(party));
 
 
 /*
@@ -60,9 +73,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
-}
+function multiply(a, b){
+  return a * b;
+  }
+
+console.log('task 1 d', multiply(9, 9));
 
 
 
@@ -76,9 +91,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
-}
+function multiply(a, b){
+  return a * b;
+  }
+
+console.log('task 1 d', multiply(9, 9));
 
 
 
@@ -109,10 +126,27 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(age >=1 && weight <=5){
+    return weight * 0.05;
+  }else if(age >=1 && weight >=6 && weight <= 10){
+    return weight * 0.04;
+  }else if( age >=1 && weight >= 11 && weight <= 15){
+    return weight * 0.03;
+  }else if(age >= 1 && weight >15){
+    return weight * 0.02;
+  }else if(age < 1 && age >=0.583){
+    return weight *0.04;
+  }else if(age < 0.583 && age >= 0.333){
+    return weight * 0.05;
+  }else if (age < 0.333){
+    return weight *0.10;
+  }else {
+    return 'please try again'
+  }
 }
 
+console.log ('task 3', hungryDog(15, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -136,30 +170,31 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-let computer = math.random();
+let computer = Math.random();
+
 if(computer <= 0.34){
   computer = 'rock';
-}else if (computer <= 0.67){
-  computer ='paper';
-}else if(computer >= 0.67){
-  computer ='scissors';
+}else if( computer <= 0.67){
+  computer = 'paper';
+}else if( computer > 0.67){
+  computer = 'scissors';
 }
 
 function game(user, computer){
   if(user === computer){
-    return `its a tie`;
+    return `it's a tie`;
   }else if(user === 'rock' && computer === 'scissors'){
     return `you win!`;
-  }else if(user === 'paper' && computer === 'rock'){
+  }else if (user === 'paper' && computer === 'rock'){
     return `you win!`;
-  }else if(user === `scissors` && computer === `paper`){
-    return `you win!`;
+  }else if (user === 'scissors' && computer === 'paper'){
+    return `you win!`
   }else{
-    return `you lose!`;
+    return `you lose!`
   }
 }
-
-console.log('task 4', game('rock', computer));
+  
+  console.log('task 4', game('paper', computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -172,9 +207,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
-}
+function miles(km){
+  return km * 0.621371;
+  }
+
+console.log('task 5a', miles(20));
 
 
 
@@ -186,9 +223,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
-}
+function miles(km){
+  return km * 0.621371;
+  }
+
+console.log('task 5a', miles(20));
 
 
 
@@ -225,10 +264,11 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
-}
+function miles(km){
+  return km * 0.621371;
+  }
 
+console.log('task 5a', miles(20));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
